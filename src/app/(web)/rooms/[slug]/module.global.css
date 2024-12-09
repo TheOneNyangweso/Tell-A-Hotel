@@ -1,0 +1,48 @@
+/* Rotating rainbow border animation */
+@keyframes rotate-border {
+  0% {
+    border-image-source: linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    transform: rotate(360deg); /* Rotate the gradient */
+  }
+}
+
+.rainbow-border {
+  position: relative;
+  border: 1px solid transparent; /* Make the border transparent */
+  border-radius: 1rem; /* Rounded corners */
+  padding: 16px; /* Padding inside the div */
+
+  /* Apply rainbow gradient to the border */
+  border-image: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  border-image-slice: 1;
+}
